@@ -7,6 +7,3 @@ mosh
 # Python
 python-dev python-pip python3-dev python3-pip
 
-# Neovim
-ppa:neovim-ppa/stable
-neovim
