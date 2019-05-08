@@ -3,7 +3,16 @@
 if [[ "$UID" -ne "0" ]]; then
   echo "This script must be run as root (sudo)"
   echo "Aborting..."
-  [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1
+  exit 1
+fi
+
+read -p "Setup ufw? [Y/n]" -n 1 -r
+echo
+
+if [[ $REPLY =~ ^[Nn]$ ]]
+then
+  echo "Aborting..."
+  exit 1
 fi
 
 echo "Enabling logs..."
