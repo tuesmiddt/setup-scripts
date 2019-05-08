@@ -97,6 +97,7 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
 fi
 
 export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.yarn/bin:$PATH"
 
 alias nvim="nvim.appimage"
 alias vim="nvim"
