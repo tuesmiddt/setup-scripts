@@ -19,7 +19,7 @@ apt-get update
 echo "Done."
 
 echo "Upgrading existing packages..."
-apt-get upgrade
+apt-get upgrade -y
 echo "Done."
 
 echo "Installing packages..."

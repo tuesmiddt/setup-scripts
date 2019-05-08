@@ -14,7 +14,7 @@ while [[ true ]]
 do
   read -p "Is this correct? [Y/n] " -n 1 -r
   echo
-  if [[ $REPLY =~ ^[Yy]$ ]]
+  if [[ ! $REPLY =~ ^[Nn]$ ]]
   then
     break
   else
@@ -40,11 +40,21 @@ done
 mv /etc/apt/sources.list /etc/apt/sources.list.bak
 echo "Backed up sources to /etc/apt/sources.list.bak"
 
+added=0
+
 for entry in "${entries[@]}"
 do
-  echo $entry >> /etc/apt/sources.list
+  if [[ $(cat /etc/apt/sources.list.bak | grep "$entry" | wc -l) -eq 0 ]]
+  then
+    echo $entry >> /etc/apt/sources.list
+    added=1
+  fi
 done
-echo "" >> /etc/apt/sources.list
+
+if [[ $added -eq 1 ]]
+then
+  echo "" >> /etc/apt/sources.list
+fi
 
 cat /etc/apt/sources.list.bak >> /etc/apt/sources.list
 
