@@ -19,15 +19,8 @@ set_link () {
     fi
     echo "$2 symlink already exists."
     echo "$2 currently linked to $current_link"
-    
-    read -p "Remove existing link? [y/N] " -n 1 -r
-    echo
-    if [[ ! $REPLY =~ ^[Yy]$ ]]
-    then
-      echo "Skipping $2"
-      return
-    fi
-    
+
+    echo "Removing current link"
     rm $2
   elif [[ -f "$2" ]]
   then

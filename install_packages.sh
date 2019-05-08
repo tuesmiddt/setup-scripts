@@ -18,6 +18,10 @@ echo "Updating package lists..."
 apt-get update
 echo "Done."
 
+echo "Upgrading existing packages..."
+apt-get upgrade
+echo "Done."
+
 echo "Installing packages..."
 failed_pkgs=()
 
@@ -65,9 +69,6 @@ if [[ "${#failed_pkgs[@]}" -ne 0 ]]
 then
   echo "Failed to install some packages:"
   echo "${failed_pkgs[@]}"
-
-  read -p "Press any key to continue..." -n 2 -r
 fi
 
 echo "Done."
-[[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1

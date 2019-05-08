@@ -37,22 +37,15 @@ do
   echo $entry
 done
 
-read -p "Continue? [y/N] " -n 1 -r
-if [[ $REPLY =~ ^[Yy]$ ]]
-then
-  mv /etc/apt/sources.list /etc/apt/sources.list.bak
-  echo "Backed up sources to /etc/apt/sources.list.bak"
+mv /etc/apt/sources.list /etc/apt/sources.list.bak
+echo "Backed up sources to /etc/apt/sources.list.bak"
 
-  for entry in "${entries[@]}"
-  do
-    echo $entry >> /etc/apt/sources.list
-  done
-  echo "" >> /etc/apt/sources.list
+for entry in "${entries[@]}"
+do
+  echo $entry >> /etc/apt/sources.list
+done
+echo "" >> /etc/apt/sources.list
 
-  cat /etc/apt/sources.list.bak >> /etc/apt/sources.list
+cat /etc/apt/sources.list.bak >> /etc/apt/sources.list
 
-  echo "Finished adding mirrors."
-else
-  "Skipped adding mirrors."
-fi
-
+echo "Finished adding mirrors."
