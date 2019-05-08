@@ -5,6 +5,7 @@
 sudo ./setup_ufw.sh
 
 sudo ./setup_apt_mirrors.sh
+sudo ./purge_packages.sh apt_uninstall.list
 sudo ./install_packages.sh apt_install.list
 sudo ./setup_perf.sh
 
