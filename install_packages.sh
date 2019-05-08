@@ -23,6 +23,7 @@ apt-get upgrade -y
 echo "Done."
 
 echo "Installing packages..."
+echo
 failed_pkgs=()
 
 mapfile pkg_list < $1
@@ -43,9 +44,13 @@ do
   # Handle PPAs
   if [[ $line == ppa:* ]]
   then
-    echo "Adding PPA: $line"
-    add-apt-repository $line
-    apt-get update
+    ppa_name=$(echo "$line" | sed s/ppa://)
+    if [[ $(grep -q "^deb .*$ppa_name" /etc/apt/sources.list /etc/apt/sources.list.d/* | wc -l) -ne 0 ]]
+    then
+      echo "Adding PPA: $line"
+      add-apt-repository $line
+      apt-get update
+    fi
     continue
   fi
 

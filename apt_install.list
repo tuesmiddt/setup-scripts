@@ -13,3 +13,6 @@ htop dstat nmon
 # Python
 python-dev python-pip python3-dev python3-pip python3-venv
 
+# Alacritty
+ppa:system76/pop
+alacritty
