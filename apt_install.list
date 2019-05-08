@@ -5,6 +5,7 @@ vim
 mosh
 curl 
 wget
+tree
 
 # perf utils
 htop dstat nmon
