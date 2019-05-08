@@ -1,12 +1,5 @@
 #!/usr/bin/env bash
 
-# read -p "Set ufw rules? [y/N] " -n 1 -r
-# echo
-# if [[ ! $REPLY =~ ^[Yy]$ ]] 
-# then
-#   echo "Aborting..."
-#   [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1
-# fi
 if [[ "$UID" -ne "0" ]]; then
   echo "This script must be run as root (sudo)"
   echo "Aborting..."
