@@ -8,14 +8,14 @@ if [[ $? -ne 0 ]]
 then
   echo "Zsh not found."
   echo "Aborting..."
-  [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1
+  exit 1
 fi
 
 if [[ -d "$ZSH" ]]
 then
   echo "Oh-my-zsh already setup."
   echo "Aborting..."
-  [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1
+  exit 1
 fi
 
 echo "Installing oh-my-zsh..."

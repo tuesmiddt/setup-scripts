@@ -15,8 +15,6 @@ fi
 bash -c "cd $TARGET && curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage"
 chmod u+x "$TARGET/nvim.appimage"
 
-set_link $(realpath dotfiles/init.vim) "$HOME/.config/nvim/init.vim"
-
 if [[ ! -d "$HOME/.vimtmp" ]]
 then
   echo "Creating tmp dir at ~/.vimtmp"
@@ -45,3 +43,10 @@ yarn global add neovim
 
 echo "Installing vim-plug..."
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+set_link $(realpath dotfiles/init.vim) "$HOME/.config/nvim/init.vim"
+
+echo "Installing plugins..."
+nvim +'PlugUpdate --sync' +qa > /dev/null
+
+echo "Done."
