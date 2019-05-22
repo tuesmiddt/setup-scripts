@@ -3,17 +3,55 @@ zsh
 tmux
 vim
 mosh
-curl 
+curl
 wget
 tree
+unzip
 
 # perf utils
-htop dstat nmon
+htop
+dstat
+nmon
+linux-tools-common
 
 # Python
-python-dev python-pip python3-dev python3-pip python3-venv
+python-dev
+python-pip
+python3-dev
+python3-pip
+python3-venv
 
-# Alacritty
-ppa:system76/pop
-alacritty
-libegl1-mesa mesa-utils-extra
+# WM/DE
+slick-greeter
+i3
+i3-wm
+dunst
+i3lock
+i3status
+suckless-tools
+compton
+xsettingsd
+lxappearance
+at-spi2-core
+
+# Clipboard, screenshot
+scrot
+xclip
+clipit
+
+# Audio
+pulseaudio
+pavucontrol
+
+# Network
+network-manager
+blueman
+
+# Power Management
+xfce4-power-manager
+tlp
+
+# Files/browser
+pcmanfm
+firefox
+chromium-browser

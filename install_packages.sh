@@ -14,19 +14,14 @@ then
   [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1
 fi
 
-echo "Updating package lists..."
-apt-get update
-echo "Done."
+file=$1
+flags=$2
 
-echo "Upgrading existing packages..."
-apt-get upgrade -y
-echo "Done."
+pending_pkgs=()
 
-echo "Installing packages..."
-echo
-failed_pkgs=()
+mapfile pkg_list < "$file"
 
-mapfile pkg_list < $1
+echo "Reading $file"
 
 for line in "${pkg_list[@]}"
 do
@@ -39,7 +34,7 @@ do
     continue
   fi
 
-  echo "Processing line: $line"
+  # echo "Processing line: $line"
 
   # Handle PPAs
   if [[ $line == ppa:* ]]
@@ -49,7 +44,6 @@ do
     then
       echo "Adding PPA: $line"
       add-apt-repository $line
-      apt-get update
     fi
     continue
   fi
@@ -58,22 +52,22 @@ do
   readarray -td '' pkgs < <(awk '{ gsub(/[[:space:]]+/,"\0"); print; }' <<<"$line");
   for pkg in "${pkgs[@]}"
   do
-    apt-get install $pkg -y
-
-    if [[ $? -eq 0 ]]
-    then
-      echo "Successfully installed $pkg"
-    else
-      echo "Error installing $pkg"
-      failed_pkgs=("${failed_pkgs[@]}" "$pkg")
-    fi
+    pending_pkgs=("${pending_pkgs[@]}" "$pkg")
   done
 done
 
-if [[ "${#failed_pkgs[@]}" -ne 0 ]]
-then
-  echo "Failed to install some packages:"
-  echo "${failed_pkgs[@]}"
-fi
+echo "Updating package lists..."
+apt-get update
+echo "Done."
+
+echo "Upgrading existing packages..."
+apt-get upgrade -y
+echo "Done."
+
+echo "Installing packages..."
+echo
+
+pkgs=$(echo ${pending_pkgs[@]})
+echo "apt-get install $2 $pkgs -y"
 
 echo "Done."
