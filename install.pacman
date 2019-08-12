@@ -1,0 +1,35 @@
+i3
+wmctrl
+rofi
+dmenu
+xorg-xinput
+nitrogen
+arc-gtk-theme
+feh
+
+vim
+zsh
+tmux
+mosh
+curl
+wget
+tree
+unzip
+alacritty
+
+# Perf utils
+htop
+dstat
+nmon
+
+# Misc stuff
+dunst
+chromium
+redshift
+
+# Dev
+go
+rust
+nodejs npm yarn
+code
+jdk-openjdk
