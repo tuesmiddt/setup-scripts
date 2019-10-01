@@ -248,6 +248,9 @@ autocmd BufWritePre * %s/\s\+$//e
 " Autowrite
 set autowrite
 
+" Use `:Format` to format current buffer
+command! -nargs=0 Format :call CocAction('format')
+
 let g:tagbar_type_go = {
 	\ 'ctagstype' : 'go',
 	\ 'kinds'     : [
