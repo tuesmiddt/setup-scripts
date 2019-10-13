@@ -1,5 +1,4 @@
 " Set providers
-let g:python3_host_prog = '$HOME/venv/py3nvim/bin/python'
 let g:node_host_prog = '$HOME/.yarn/bin/neovim-node-host'
 
 " Vim-plug
@@ -12,7 +11,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoUpdateBinaries' }
 
 " Conquer of Completion
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " NerdTree (on-demand)
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
