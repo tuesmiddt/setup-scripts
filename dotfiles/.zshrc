@@ -102,6 +102,7 @@ export PATH="$HOME/.local/bin:$PATH"
 export GOPATH="$HOME"
 
 alias v="nvim"
+alias t="tmux"
 alias o="xdg-open"
 
 autoload -U promptinit; promptinit
