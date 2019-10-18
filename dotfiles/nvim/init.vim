@@ -163,7 +163,7 @@ set expandtab
 set backspace=2
 
 " Ruler
-set colorcolumn="81, 101"
+set colorcolumn=81,101
 
 " Set temp directory so that tmp files aren't everywhere
 set backupdir=~/.vimtmp,.
