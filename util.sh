@@ -2,6 +2,7 @@
 
 # Usage: link_file source_realpath target_path
 set_link () {
+  source=$(realpath $1)
   echo "Setting $2"
   target_dir=$(dirname $2)
   if [[ ! -d "$target_dir" ]]
@@ -13,7 +14,7 @@ set_link () {
   then
     current_link=$(realpath $(readlink $2))
 
-    if [[ $1 = $current_link ]]
+    if [[ $source = $current_link ]]
     then
       return
     fi
@@ -30,5 +31,5 @@ set_link () {
     rm $2
   fi
 
-  ln -s $1 $2
+  ln -s $source $2
 }

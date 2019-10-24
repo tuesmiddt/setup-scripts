@@ -1,12 +1,3 @@
-i3
-wmctrl
-rofi
-dmenu
-xorg-xinput
-nitrogen
-arc-gtk-theme
-feh
-
 vim
 zsh
 tmux
@@ -22,10 +13,10 @@ htop
 dstat
 nmon
 
-# Misc stuff
-dunst
+# Browsers
 chromium
 redshift
+firefox
 
 # Dev
 go

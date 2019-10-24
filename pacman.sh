@@ -15,7 +15,6 @@ then
 fi
 
 file=$1
-flags=$2
 
 pending_pkgs=()
 
