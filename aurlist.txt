@@ -1,4 +1,3 @@
-xcwd-git
-zsh-autosuggestions
 zsh-pure-prompt
+zsh-autosuggestions
 oh-my-zsh-git

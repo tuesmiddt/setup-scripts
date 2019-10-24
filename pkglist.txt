@@ -7,20 +7,20 @@ wget
 tree
 unzip
 alacritty
+yay
 
-# Perf utils
 htop
 dstat
 nmon
 
-# Browsers
 chromium
 redshift
 firefox
 
-# Dev
 go
 rust
-nodejs npm yarn
+nodejs
+npm
+yarn
 code
 jdk-openjdk
