@@ -196,7 +196,7 @@ set incsearch
 nnoremap <C-m> :noh<CR>
 
 " Use system clipboard
-set clipboard=unnamed
+set clipboard^=unnamed,unnamedplus
 
 " Autoread
 set autoread
