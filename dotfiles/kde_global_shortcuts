@@ -1,10 +1,6 @@
 [ActivityManager][Global Shortcuts]
 switch-to-activity-c01b5c27-17c0-478c-a81f-83e4cdc733dc=none
 
-[KDE Keyboard Layout Switcher][Global Shortcuts]
-Switch keyboard layout to English (US)=none
-Switch to Next Keyboard Layout=Ctrl+Alt+K
-
 [alacritty.desktop][Global Shortcuts]
 New=none
 _launch=Meta+Return
@@ -16,6 +12,8 @@ Toggle Screen Reader On and Off=none
 Disable Touchpad=Touchpad Off
 Enable Touchpad=Touchpad On
 Show System Activity=none
+Switch keyboard layout to English (US)=none
+Switch to Next Keyboard Layout=Ctrl+Alt+K
 Toggle Touchpad=Touchpad Toggle
 display=Display; Meta+P
 {8598ec55-3992-489c-84d8-d45940577c28}=none
@@ -58,7 +56,7 @@ MoveZoomUp=none
 Remove Window From Group=none
 Setup Window Shortcut=none
 Show Desktop=Meta+D
-ShowDesktopGrid=Meta+Tab
+ShowDesktopGrid=Ctrl+F8
 Suspend Compositing=Alt+Shift+F12
 Switch One Desktop Down=Meta+J
 Switch One Desktop Up=Meta+K
@@ -108,8 +106,8 @@ Walk Through Desktops=none
 Walk Through Desktops (Reverse)=none
 Walk Through Window Tabs=none
 Walk Through Window Tabs (Reverse)=none
-Walk Through Windows=Alt+Tab
-Walk Through Windows (Reverse)=Alt+Shift+Backtab
+Walk Through Windows=Meta+Tab
+Walk Through Windows (Reverse)=Meta+Ctrl+Tab
 Walk Through Windows Alternative=none
 Walk Through Windows Alternative (Reverse)=none
 Walk Through Windows of Current Application=Alt+`
