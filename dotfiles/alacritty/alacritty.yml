@@ -78,7 +78,8 @@ tabspaces: 4
 # Font configuration (changes require restart)
 font:
   normal:
-    family: Source Code Pro
+    family: Iosevka Term
+    style: Light
 
   # Normal (roman) font face
   #normal:

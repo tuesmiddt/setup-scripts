@@ -3,7 +3,7 @@ switch-to-activity-c01b5c27-17c0-478c-a81f-83e4cdc733dc=none
 
 [alacritty.desktop][Global Shortcuts]
 New=none
-_launch=Meta+Return
+_launch=none
 
 [kaccess][Global Shortcuts]
 Toggle Screen Reader On and Off=none
@@ -197,6 +197,14 @@ stopmedia=Media Stop
 [org.kde.dolphin.desktop][Global Shortcuts]
 _launch=Meta+E
 
+[org.kde.konsole.desktop][Global Shortcuts]
+NewTab=none
+NewWindow=none
+_launch=Meta+Return
+
+[org.kde.plasma.emojier.desktop][Global Shortcuts]
+_launch=Meta+.
+
 [org.kde.spectacle.desktop][Global Shortcuts]
 ActiveWindowScreenShot=Meta+Print
 CurrentMonitorScreenShot=none
@@ -240,3 +248,6 @@ show dashboard=none
 show-barcode=none
 show-on-mouse-pos=none
 stop current activity=Meta+S
+switch to next activity=none
+switch to previous activity=none
+toggle do not disturb=none

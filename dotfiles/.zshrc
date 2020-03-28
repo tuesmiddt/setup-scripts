@@ -64,6 +64,9 @@ HYPHEN_INSENSITIVE="true"
 plugins=(
     fzf
     git
+    docker
+    docker-compose
+    nvm
     ssh-agent
     zsh-autosuggestions
 )
@@ -105,6 +108,7 @@ alias v="nvim"
 alias t="tmux"
 alias o="xdg-open"
 alias py="python3"
+alias xclip='xargs echo -n | xclip -selection clipboard'
 
 autoload -U promptinit; promptinit
 prompt pure
@@ -114,3 +118,5 @@ if [ -f '/home/duck/google-cloud-sdk/path.zsh.inc' ]; then . '/home/duck/google-
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/duck/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/duck/google-cloud-sdk/completion.zsh.inc'; fi
+
+. /opt/asdf-vm/asdf.sh
